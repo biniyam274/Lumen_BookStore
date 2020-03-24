@@ -14,13 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
 $router->get('/hello', function () use ($router) {
      return "Hello world!";
     });
     
-$router->get('/hello/{name}',[
-    "middleware" => "hello",
-    function($name){
-        return "Hello $name";
-    }
-]);
+$router->get('/books' , 'BooksController@index');
+    

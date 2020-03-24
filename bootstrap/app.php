@@ -80,9 +80,10 @@ $app->configure('app');
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
-$app->routeMiddleware([
-        'hello' => App\Http\Middleware\ExampleMiddleware::class,
-    ]);
+// $app->routeMiddleware([
+//         'hello' => App\Http\Middleware\ExampleMiddleware::class,
+//     ]);
+
 $app->middleware([
        App\Http\Middleware\RequestLogMiddleware::class,
     ]);
